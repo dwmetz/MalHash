@@ -1,5 +1,5 @@
 <#
-Mal-Hash.ps1 v1.3
+Mal-Hash.ps1 v1.4
 https://github.com/dwmetz/Mal-Hash
 Author: @dwmetz
 
@@ -14,15 +14,34 @@ Prerequisites:
         Internet access is required for VT lookup.
         Virus Total API key saved in vt-api.txt
 
+13-January-2023 ascii art update
 6-December-2022 simplified hash output; 
                 strings (+8); 
                 UTC timestamp in report
                 report name change
 #>
-Write-Host -Fore Gray "------------------------------------------------------"
-Write-Host -Fore Cyan "       Mal-Hash v1.3" 
-Write-Host -Fore Gray "       https://github.com/dwmetz/Mal-Hash"
-Write-Host -Fore Gray "------------------------------------------------------"
+Clear-Host
+Write-Host ""
+Write-Host ""
+Write-Host ""
+Write-Host -Fore Gray "                                       ~"
+Write-Host -Fore DarkGray "                                       ~  ~"
+Write-Host -Fore Gray '                                         ~  ~ '
+Write-Host -Fore DarkGray "                                       ~  ~"
+Write-Host -Fore DarkYellow '   __.....--....____                ,--------.'
+Write-Host -Fore Yellow '  (_[...._          "`--.._        /          \'
+Write-Host -Fore DarkYellow '          `-._            /"`--.._/            \'
+Write-Host -Fore Yellow '              `-._       /            B S F     !'
+Write-Host -Fore DarkYellow '                  "`-.._/                      /'
+Write-Host -Fore Yellow '                         `-.._               ,'''
+Write-Host -Fore DarkYellow '                               "--..______,"'
+Write-Host ""
+Write-Host ""
+Write-Host -Fore DarkYellow "                  Mal-Hash v1.4" 
+Write-Host -Fore Gray "        https://github.com/dwmetz/CSIRT-Collect"
+Write-Host -Fore Gray "          @dwmetz | bakerstreetforensics.com"
+Write-Host ""
+Write-Host ""
 write-host " "
 $tstamp = (Get-Date -Format "yyyy-MM-dd-HH-mm")
 $script:file = Read-Host -Prompt 'enter path and filename'
