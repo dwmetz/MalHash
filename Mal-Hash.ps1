@@ -2,18 +2,14 @@
 Mal-Hash.ps1 v1.4
 https://github.com/dwmetz/Mal-Hash
 Author: @dwmetz
-
 Function: This script will generate hashes (MD5, SHA1, SHA256) for a specified file, 
         run strings against the file,
         submit the MD5 to Virus Total, 
         produce a report with the results.
-
         * Now works on Windows, Mac & Linux!
-
 Prerequisites:
         Internet access is required for VT lookup.
         Virus Total API key saved in vt-api.txt
-
 23-January-2023 ascii art update
 6-December-2022 simplified hash output; 
                 strings (+8); 
@@ -51,7 +47,7 @@ write-host " "
 $sourcefile = [system.IO.Path]::GetFileName("$script:file")
 "SOURCE: $sourcefile" | Out-File -FilePath malhash.-t.txt -Append
 " " | Out-File -FilePath malhash.-t.txt -Append
-$datetime = Get-Date            
+$datetime = Get-Date
 $date = $datetime.ToUniversalTime()
 "DATE/TIME UTC: $date" | Out-File -FilePath malhash.-t.txt -Append
 " " | Out-File -FilePath malhash.-t.txt -Append
@@ -65,7 +61,7 @@ $SHA256hash = (Get-FileHash $file -Algorithm SHA256).Hash
 "SHA256: $SHA256hash" | Out-File -FilePath malhash.-t.txt -Append
 " " | Out-File -FilePath malhash.-t.txt -Append
 "** STRINGS: ** " | Out-File -FilePath malhash.-t.txt -Append
-strings -n 8 $script:file  | Out-File -FilePath malhash.-t.txt -Append
+strings -n 8 $script:file | Out-File -FilePath malhash.-t.txt -Append
 write-host "STRINGS:" -Fore Cyan
 strings -n 8 $script:file
 " " | Out-File -FilePath malhash.-t.txt -Append
