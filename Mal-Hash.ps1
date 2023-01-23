@@ -40,7 +40,7 @@ Write-host -Fore Cyan "
            ''''''''''                                                                                                                 
 "                
 Write-Host -Fore Cyan "                    Mal-Hash v1.4" 
-Write-Host -Fore Gray "        https://github.com/dwmetz/CSIRT-Collect"
+Write-Host -Fore Gray "          https://github.com/dwmetz/Mal-Hash"
 Write-Host -Fore Gray "          @dwmetz | bakerstreetforensics.com"
 Write-Host ""
 Write-Host ""
