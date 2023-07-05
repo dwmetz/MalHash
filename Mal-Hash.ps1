@@ -15,6 +15,7 @@ Prerequisites:
                 strings (+8); 
                 UTC timestamp in report
                 report name change
+5-July-2023 Changed default hash value submission to SHA256
 #>
 Clear-Host
 Write-Host ""
@@ -68,8 +69,8 @@ strings -n 8 $script:file
 Write-host ""
 # Comment out below to skip VT query (offline analysis)
 "** VIRUS TOTAL RESULTS: **" | Out-File -FilePath malhash.-t.txt -Append
-$fileHash = (Get-FileHash $file -Algorithm MD5).Hash
-write-host "Submitting MD5 hash $fileHash to Virus Total" -Fore Cyan
+$fileHash = (Get-FileHash $file -Algorithm SHA256).Hash
+write-host "Submitting SHA256 hash $fileHash to Virus Total" -Fore Cyan
 Write-host ""
 $uri = "https://www.virustotal.com/vtapi/v2/file/report?apikey=$apiKey&resource=$fileHash"
 write-host "VIRUS TOTAL RESULTS:" -Fore Cyan
