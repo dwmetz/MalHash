@@ -23,7 +23,7 @@
 
 Mal-Hash.ps1 and VTHashSub.ps1 will operate (via PowerShell) on Windows, Mac & Linux.
 
-Latest updates: 
+## Latest updates: 
 - n of x vendors detected
 - VT permalink
 - Malware Bazaar results
