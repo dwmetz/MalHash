@@ -16,7 +16,7 @@
 - Timestamp of the analysis is recorded in UTC. 
 
 ## VTHashSub.ps1
-- The script takes a hash value as input and submits the hash to Virus Total for analysis
+- The script takes a hash value as input and submits the hash to Virus Total for analysis.
 - The script will check Malware Bazaar to see if a sample matching the hash is available.
 - The hashes, Virus Total and Malware Bazaar results are both displayed on screen and saved to a text report. 
 - Timestamp of the analysis is recorded in UTC. 
