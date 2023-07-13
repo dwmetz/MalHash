@@ -7,6 +7,7 @@
  </p>
 
 </div>
+
 ## Mal-Hash.ps1
 - The script takes the input of a file, calculates the hashes (MD5, SHA1, SHA256), and then submits the SHA256 hash to Virus Total for analysis. 
 - The script will also run Strings against the sample.
